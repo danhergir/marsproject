@@ -12,6 +12,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     path('rovers/', views.index),
+
+    path('home/', views.home),
     #path('', rovers_views.index, name='index'),
 
 
