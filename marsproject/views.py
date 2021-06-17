@@ -17,3 +17,10 @@ def index(request):
 
 def home(request):
     return render(request, 'home-template.html')
+
+def mars(request):
+    return render(request, 'mars.html')
+
+
+
+
