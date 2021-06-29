@@ -4,6 +4,7 @@ from django.http import JsonResponse
 import requests
 
 
+
 # Create your views here.
 # Main page of app.
 def index(request):
@@ -14,5 +15,4 @@ def index(request):
     if 'ls' in latest_weather:
         del latest_weather['ls']
 
-    #return render(request, "weather/display.html", {"latest_weather": latest_weather})
-    return JsonResponse({'latest_weather': latest_weather})
+    return render(request, 'weather.html', {"latest_weather": latest_weather})

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Latest Mars News</title>
+</head>
+<body>
+<div class="container-fluid">
+    <h1 class="mt-4">Mars Weather Report</h1>
+    <ul>
+        {% for sol in latest_weather.sols %}
+            <table>
+            <tr>
+                <th>Date</th>
+                <th>Low Temperature (°C)</th>
+                <th>High Temperature (°C)</th>
+                <th>Atmospheric Pressure</th>
+                <th>Sunrise Time</th>
+                <th>Sunset Time</th>
+            </tr>
+            <tr>
+                <td>{{ sol.terrestrial_date }}</td>
+                <td>{{ sol.min_temp }}</td>
+                <td>{{ sol.max_temp }}</td>
+                <td>{{ sol.pressure }}</td>
+                <td>{{ sol.sunrise }}</td>
+                <td>{{ sol.sunset }}</td>
+            </tr>
+            </table>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
