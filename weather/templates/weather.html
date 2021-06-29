@@ -7,6 +7,10 @@
 <body>
 <div class="container-fluid">
     <h1 class="mt-4">Mars Weather Report</h1>
+    <h3 class="mt-4">The Weather at Jezero Crater</h3>
+    <p>This data comes from the Mars Rover Perseverance which landed in the Jezero Crater on Mars on February 18, 2021.
+    Since then it has been sending back data from its MEDA (Mars Environmental Dynamics Analyzer) sensor which takes
+    a measurement once every hour.</p>
     <ul>
         {% for sol in latest_weather.sols %}
             <table>
