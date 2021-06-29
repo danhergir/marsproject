@@ -12,13 +12,13 @@ from .calculator import views as calculator_views
 
 urlpatterns = [
 
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls,),
 
-    path('rovers/', views.index),
+    path('rovers/', views.index, name="rovers"),
 
-    path('home/', views.home),
+    path('home/', views.home, name="home"),
 
-    path('mars/', views.mars),
+    path('mars/', views.mars, name="mars"),
 
     path('calculator/', calculator_views.calculate, name='calculator-calculate'),
     #path('', rovers_views.index, name='index'),

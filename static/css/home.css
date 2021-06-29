@@ -17,6 +17,10 @@ main {
     justify-content: center;
 }
 
+.adjust-img {
+    height: 8em !important;
+}
+
 .planet-container {
     display: grid;
     max-width: 80%;
