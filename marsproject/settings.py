@@ -39,16 +39,16 @@ DJANGO_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
-    'weather.apps.WeatherConfig',  # Added weather app
-    'newsfeed.apps.NewsfeedConfig',  # Added newsfeed app
+
 ]
 
 THIRD_PARTY_APPS = [
-    'rest_framework',
-    'rest_framework.authtoken',
+    # 'rest_framework',
+    # 'rest_framework.authtoken',
 ]
 LOCAL_APPS = [
-    
+    'weather.apps.WeatherConfig',  # Added weather app
+    'newsfeed.apps.NewsfeedConfig',  # Added newsfeed app
 ]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
