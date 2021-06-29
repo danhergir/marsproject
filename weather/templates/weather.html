@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Latest Mars Weather</title>
+</head>
+<body>
+<div class="container-fluid">
+    <h1 class="mt-4">Mars Weather Report</h1>
+    <h3 class="mt-4">The Weather at Jezero Crater</h3>
+    <p>This data comes from the Mars Rover Perseverance which landed in the Jezero Crater on Mars on February 18, 2021.
+    Since then it has been sending back data from its MEDA (Mars Environmental Dynamics Analyzer) sensor which takes
+    a measurement once every hour.</p>
+    <ul>
+        {% for sol in latest_weather.sols %}
+            <table>
+            <tr>
+                <th>Date</th>
+                <th>Low Temperature (°C)</th>
+                <th>High Temperature (°C)</th>
+                <th>Atmospheric Pressure</th>
+                <th>Sunrise Time</th>
+                <th>Sunset Time</th>
+            </tr>
+            <tr>
+                <td>{{ sol.terrestrial_date }}</td>
+                <td>{{ sol.min_temp }}</td>
+                <td>{{ sol.max_temp }}</td>
+                <td>{{ sol.pressure }}</td>
+                <td>{{ sol.sunrise }}</td>
+                <td>{{ sol.sunset }}</td>
+            </tr>
+            </table>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
