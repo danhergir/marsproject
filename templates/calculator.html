@@ -10,15 +10,11 @@
         <link rel="icon" type="image/x-icon" href="../static/assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="../static/css/styles.css" rel="stylesheet" />
-        <link href="../static/css/home.css" rel="stylesheet" />
     </head>
     <body>
         <div class="d-flex" id="wrapper">
             <!-- Sidebar-->
             <div class="border-end bg-white" id="sidebar-wrapper">
-                <div class="sidebar-heading border-bottom bg-light">
-                    <img src="../static/images/home.png" alt="mars-project-png" class="home-btn">
-                </div>
                 <div class="list-group list-group-flush">
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Rovers</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Weather</a>
@@ -51,13 +47,36 @@
                 </nav>
                 <!-- Page content-->
                 <div class="container-fluid">
-                    <h1 class="mt-4">Rover Images</h1>
-                    <ul>
-                        {% for post in posts %}
-                            <p>{{ post.camera.full_name }}</p>
-                            <img src="{{ post.img_src }}"/>
-                        {% endfor %}
-                    </ul>                        
+                    <div class="row">
+                        <h1 class="mt-4 text-center mx-auto">Mars Calculator</h1>
+                        <div class="col-sm-6 col-sm-offset-6 align-items-center mx-auto text-center">
+                            <form class="mt-5" action={% url 'calculator-calculate' %} method="post">
+                                {% csrf_token %}
+                                <div class="mb-3">
+                                  <label for="age" class="form-label"><strong>Age</strong></label>
+                                  <input name="age" type="number" class="form-control text-center">
+                                </div>
+                                <div class="mb-3 ">
+                                  <label for="weight" class="form-label"><strong>Weight</strong></label>
+                                  <input type="number" name="weight" class="form-control text-center">
+                                </div>
+                                <button type="submit" class="btn btn-primary">Calculate my data</button>
+                            </form>  
+                        </div>    
+                    </div>    
+                    {% if data %}
+                    <div class="row">
+                        <h1 class="mt-4 text-center mx-auto">Your data</h1>
+                        <div class="col-sm-6 col-sm-offset-6 align-items-center mx-auto text-center">
+                            <div class="mb-3">
+                                <h6>Your age in Mars is: {{ data.age }}</h6>
+                            </div>
+                            <div class="mb-3">
+                                <h6>Your weight in Mars is: {{ data.weight }}</h6>
+                            </div>
+                        </div>    
+                    </div>    
+                    {% endif %}         
                 </div>
             </div>
         </div>

@@ -15,3 +15,12 @@ def index(request):
 
     return render(request, 'home.html', {'posts': posts})
 
+def home(request):
+    return render(request, 'home-template.html')
+
+def mars(request):
+    return render(request, 'mars.html')
+
+
+
+
