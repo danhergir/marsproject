@@ -5,6 +5,21 @@
     <title>Latest Mars News</title>
 </head>
 <body>
-
+<div class="container-fluid">
+    <h1 class="mt-4">Mars News Report</h1>
+    <ul>
+        {% for post in news %}
+            <p>
+                <a href="{{ post.link }}">{{ post.title }}</a>
+                <br />
+            <ln style="margin-left: 40px">Posted on: {{ post.date }}</ln>
+                <br />
+                <br />
+            <ln> {{ post.summary }}</ln>
+            <hr>
+            </p>
+        {% endfor %}
+    </ul>
+</div>
 </body>
 </html>
