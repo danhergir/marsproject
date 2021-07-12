@@ -13,11 +13,11 @@
     </header>
     <main>
         <div class="planet-container">
-            <img src="../static/images/rover-cam.png" alt="rover-cam" class="rover-cam bounce-1">
-            <img src="../static/images/mars-weather.png" alt="mars-facts" class="mars-facts bounce-1">
-            <img src="../static/images/my-weight.png" alt="my-weight" class="my-weight bounce-1">
-            <img src="../static/images/photo-gallery.png" alt="photo-gallery" class="photo-gallery bounce-1">
-            <img src="../static/images/mars-calendar.png" alt="mars-calendar" class="mars-calendar bounce-1">
+            <a class="rover-cam bounce-1 nav-link" href="{% url 'mars' %}"><img src="../static/images/rover-cam.png" alt="rover-cam"></a>
+            <a class="mars-facts bounce-1 nav-link" href="{% url 'weather' %}"><img src="../static/images/mars-weather.png" alt="mars-facts"></a>
+            <a class="my-weight bounce-1 nav-link" href="{% url 'calculator-calculate' %}"><img src="../static/images/my-weight.png" alt="my-weight"></a>
+            <a class="photo-gallery bounce-1 nav-link" href="{% url 'rovers' %}"><img src="../static/images/photo-gallery.png" alt="photo-gallery"></a>
+            <a class="mars-calendar bounce-1 nav-link" href="{% url 'newsfeed' %}"><img src="../static/images/mars-calendar.png" alt="mars-calendar"></a>
         </div>
 
     </main>
