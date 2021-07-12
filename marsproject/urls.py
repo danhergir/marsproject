@@ -21,10 +21,9 @@ urlpatterns = [
     path('mars/', views.mars, name="mars"),
 
     path('calculator/', calculator_views.calculate, name='calculator-calculate'),
-    #path('', rovers_views.index, name='index'),
 
-    path('weather/', include('weather.urls')),
+    path('weather/', include('weather.urls'), name="weather"),
 
-    path('newsfeed/', include('newsfeed.urls')),
+    path('newsfeed/', include('newsfeed.urls'), name="newsfeed"),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
