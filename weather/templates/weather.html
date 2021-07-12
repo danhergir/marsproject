@@ -1,35 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Latest Mars Weather</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Mars Weather</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../static/assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../static/css/styles.css" rel="stylesheet" />
+    <link href="../static/css/home.css" rel="stylesheet" />
 </head>
 <body>
+<div class="container-fluid" id="wrapper">
+    <!-- Sidebar-->
+    <div class="row">
+        <!-- Top navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light justify-content-center">
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}"><img src="../static/images/home.png" alt="rover-cam" class="adjust-img rover-cam bounce-1"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'mars' %}"><img src="../static/images/rover-cam.png" alt="rover-cam" class="adjust-img rover-cam bounce-1"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><img src="../static/images/mars-weather.png" alt="rover-cam" class="adjust-img rover-cam bounce-1"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'calculator-calculate' %}"><img src="../static/images/my-weight.png" alt="rover-cam" class="adjust-img rover-cam bounce-1"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'rovers' %}"><img src="../static/images/photo-gallery.png" alt="rover-cam" class="adjust-img rover-cam bounce-1"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><img src="../static/images/mars-calendar.png" alt="rover-cam" class="adjust-img rover-cam bounce-1"></a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Page content-->
+    </div>
+    <!-- Page content-->
+</div>
 <div class="container-fluid">
-    <h1 class="mt-4">Mars Weather Report</h1>
-    <h3 class="mt-4">The Weather at Jezero Crater</h3>
-    <p>This data comes from the Mars Rover Perseverance which landed in the Jezero Crater on Mars on February 18, 2021.
-    Since then it has been sending back data from its MEDA (Mars Environmental Dynamics Analyzer) sensor which takes
-    a measurement once every hour.</p>
-    <ul>
+    <h1 class="form-label text-white" style="text-align: center">Mars Weather Report</h1>
+    <h3 class="form-label text-white" style="text-align: center">The Weather at Jezero Crater</h3>
+    <p class="form-label text-white" style="text-align: center">This data comes from the Mars Rover Perseverance which landed in the Jezero Crater on Mars on February 18, 2021.
+        Since then it has been sending back data from its MEDA (Mars Environmental Dynamics Analyzer) sensor which takes
+        a measurement once every hour.</p>
+    <ul class="form-label text-white" style="text-align: center">
         {% for sol in latest_weather.sols %}
-            <table>
-            <tr>
-                <th>Date</th>
-                <th>Low Temperature (°C)</th>
-                <th>High Temperature (°C)</th>
-                <th>Atmospheric Pressure</th>
-                <th>Sunrise Time</th>
-                <th>Sunset Time</th>
-            </tr>
-            <tr>
-                <td>{{ sol.terrestrial_date }}</td>
-                <td>{{ sol.min_temp }}</td>
-                <td>{{ sol.max_temp }}</td>
-                <td>{{ sol.pressure }}</td>
-                <td>{{ sol.sunrise }}</td>
-                <td>{{ sol.sunset }}</td>
-            </tr>
+            <table class="table text-white mt-5">
+                <tr class="mt-5">
+                    <th>Date</th>
+                    <th>Low Temperature (°C)</th>
+                    <th>High Temperature (°C)</th>
+                    <th>Atmospheric Pressure</th>
+                    <th>Sunrise Time</th>
+                    <th>Sunset Time</th>
+                </tr>
+                <tr>
+                    <td>{{ sol.terrestrial_date }}</td>
+                    <td>{{ sol.min_temp }}</td>
+                    <td>{{ sol.max_temp }}</td>
+                    <td>{{ sol.pressure }}</td>
+                    <td>{{ sol.sunrise }}</td>
+                    <td>{{ sol.sunset }}</td>
+                </tr>
             </table>
         {% endfor %}
     </ul>
