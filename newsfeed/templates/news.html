@@ -2,9 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
     <title>Latest Mars News</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../static/assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../static/css/styles.css" rel="stylesheet" />
+    <link href="../static/css/home.css" rel="stylesheet" />
 </head>
 <body>
+<div class="container-fluid" id="wrapper">
+    <!-- Sidebar-->
+    <div class="row">
+        <!-- Top navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light justify-content-center">
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}"><img src="../static/images/home.png" alt="rover-cam" class="adjust-img rover-cam bounce-1"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'mars' %}"><img src="../static/images/rover-cam.png" alt="rover-cam" class="adjust-img rover-cam bounce-1"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{%  url 'weather' %}"><img src="../static/images/mars-weather.png" alt="rover-cam" class="adjust-img rover-cam bounce-1"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'calculator-calculate' %}"><img src="../static/images/my-weight.png" alt="rover-cam" class="adjust-img rover-cam bounce-1"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'rovers' %}"><img src="../static/images/photo-gallery.png" alt="rover-cam" class="adjust-img rover-cam bounce-1"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'newsfeed' %}"><img src="../static/images/mars-calendar.png" alt="rover-cam" class="adjust-img rover-cam bounce-1"></a>
+                </li>
+            </ul>
+        </nav>
+        <!-- Page content-->
+    </div>
+</div>
+<!-- Page content-->
 <div class="container-fluid">
     <h1 class="mt-4">Mars News Report</h1>
     <ul>
@@ -12,11 +50,11 @@
             <p>
                 <a href="{{ post.link }}">{{ post.title }}</a>
                 <br />
-            <ln style="margin-left: 40px">Posted on: {{ post.date }}</ln>
+                <ln class="form-label text-white" style="margin-left: 40px">Posted on: {{ post.date }}</ln>
                 <br />
                 <br />
-            <ln> {{ post.summary }}</ln>
-            <hr>
+                <ln class="form-label text-white"> {{ post.summary }}</ln>
+            <hr class="form-label text-white">
             </p>
         {% endfor %}
     </ul>
