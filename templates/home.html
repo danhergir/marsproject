@@ -46,7 +46,10 @@
                 <div class="col-sm-6">
                     <ul>
                         {% for post in posts %}
-                            <h6 style="color: white;">{{ post.camera.full_name }}</h6>
+                            <h6 style="color: white;">{{ post.rover.name }}</h6>
+                            <p class="text-white">SOL: {{ post.sol }}</p>
+                            <p class="text-white">EARTH DATE: {{ post.earth_date }}</p>
+                            <p class="text-white">CAMERA: {{ post.camera.name }}</p>
                             <img src="{{ post.img_src }}" class="img-fluid"/>
                         {% endfor %}
                     </ul>   

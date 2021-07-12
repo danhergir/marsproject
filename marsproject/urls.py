@@ -20,7 +20,7 @@ urlpatterns = [
 
     path('mars/', views.mars, name="mars"),
 
-    path('calculator/', calculator_views.calculate, name='calculator-calculate'),
+    path('calculator/', calculator_views.calculate, name="calculator-calculate"),
 
     path('weather/', include('weather.urls'), name="weather"),
 
