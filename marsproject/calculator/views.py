@@ -1,14 +1,4 @@
-# what season it is
-# temp 
-
-# srtructure from mars.py
-
-# Utilities
-from datetime import datetime
-import requests
-from rest_framework.decorators import action
 from django.shortcuts import render
-
 from django.http import HttpResponse
 from django.views import View
 from .forms import CalculateMars
