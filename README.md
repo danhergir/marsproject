@@ -11,17 +11,13 @@ The app draws on various API's provided by nasa as well as RSS feeds provided
 by both NASA and ScienceDaily. We have the following pages in
 the app:
 
-Image | About
-:-------------------------:|:-------------------------:
-![Newsfeed](./static/images/mars-calendar.png)|An RSS newsfeed displaying the latest information about Mars.
-|
-![Weather](./static/images/mars-weather.png)|Data from Perseverance MEDA sensor about weather on Mars.
-|
-![Calculator](./static/images/my-weight.png)|A calculator to show your weight earth weight on Mars.
-|
-![Simulation](./static/images/photo-gallery.png)|Images from Perseverance camera's shown alongside an embed of Perseverance's location for cross reference.
-|
-![Photos](./static/images/rover-cam.png)|A simulation embedded from NASA showing the landing of the Perseverance rover.
+| Image                                            | About                                                                                                      |
+|--------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| ![Newsfeed](./static/images/mars-calendar.png)   | An RSS newsfeed displaying the latest information about Mars.                                              |
+| ![Weather](./static/images/mars-weather.png)     | Data from Perseverance MEDA sensor about weather on Mars.                                                  |
+| ![Calculator](./static/images/my-weight.png)     | A calculator to show your weight earth weight on Mars.                                                     |
+| ![Simulation](./static/images/photo-gallery.png) | Images from Perseverance camera's shown alongside an embed of Perseverance's location for cross reference. |
+| ![Photos](./static/images/rover-cam.png)         | A simulation embedded from NASA showing the landing of the Perseverance rover.                             |
 
 # Development Environment
 
