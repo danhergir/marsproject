@@ -1,10 +1,8 @@
 # Mars Data Aggregator
 
-This project is an aggregator for information about the current Mar's
+This project is a webapp built in Django intended to be an aggregator for information about the current Mar's
 rover mission Perseverance as well as other general information about
 Mars.
-
-# Overview
 
 This app is targeted to be educational for students at a 5th grade level.
 The app draws on various API's provided by nasa as well as RSS feeds provided
@@ -46,6 +44,6 @@ Aaron Whittier
 
 # Future Work
 
-* Item 1
-* Item 2
-* Item 3
+* Added multiple rover cameras
+* Select image date
+* Add other mars missions
