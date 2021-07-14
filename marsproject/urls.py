@@ -4,13 +4,15 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import path, include
+from django.urls import re_path
 
-#from marsproject import views as local_views
 from . import views
 from .calculator import views as calculator_views
 
 
 urlpatterns = [
+
+    re_path(r'^$', views.home, name='homepage'),
 
     path('admin/', admin.site.urls,),
 
