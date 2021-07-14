@@ -50,16 +50,16 @@
         Since then it has been sending back data from its MEDA (Mars Environmental Dynamics Analyzer) sensor which takes
         a measurement once every hour.</p>
     <ul class="form-label text-white" style="text-align: center">
-        {% for sol in latest_weather.sols %}
-            <table class="table text-white mt-5">
-                <tr class="mt-5">
-                    <th>Date</th>
-                    <th>Low Temperature (°C)</th>
-                    <th>High Temperature (°C)</th>
-                    <th>Atmospheric Pressure</th>
-                    <th>Sunrise Time</th>
-                    <th>Sunset Time</th>
-                </tr>
+        <table class="table text-white mt-5">
+            <tr class="mt-5">
+                <th>Date</th>
+                <th>Low Temperature (°C)</th>
+                <th>High Temperature (°C)</th>
+                <th>Atmospheric Pressure (kPa)</th>
+                <th>Sunrise Time</th>
+                <th>Sunset Time</th>
+            </tr>
+            {% for sol in latest_weather.sols %}
                 <tr>
                     <td>{{ sol.terrestrial_date }}</td>
                     <td>{{ sol.min_temp }}</td>
@@ -68,8 +68,8 @@
                     <td>{{ sol.sunrise }}</td>
                     <td>{{ sol.sunset }}</td>
                 </tr>
-            </table>
-        {% endfor %}
+            {% endfor %}
+        </table>
     </ul>
 </div>
 </body>
